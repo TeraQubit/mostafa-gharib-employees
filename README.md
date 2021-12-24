@@ -1,0 +1,4 @@
+#Sirma Task
+
+From the UI the user can select a custom text file, which is then uploaded in the "src/main/resources" directory of the application. The working pairs are calculated after the upload and then displayed with their time longevity as the case is with "employees-projects.txt".
+The application is packaged as a jar file and is started as every other jar-archived Spring Boot application can be started with right click on the project and selecting run as java application or for example from the command prompth with maven by running the command mvn spring-boot:run from the root directory of the application.

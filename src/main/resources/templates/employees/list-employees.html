@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+
+    <title>Longest Working Employees Pair</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h3>Longest Working Employees Pair</h3>
+    <hr>
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Employee ID #1</th>
+            <th>Employee ID #2</th>
+            <th>Project ID</th>
+            <th>Days</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="colleague: ${colleagues}">
+            <td th:text="${colleague.empId1}" />
+            <td th:text="${colleague.empId2}" />
+            <td th:text="${colleague.projectId}" />
+            <td th:text="${colleague.days}" />
+        </tr>
+        <tr>
+            <td th:text="${longestWorkingTeam.empId1}" />
+            <td th:text="${longestWorkingTeam.empId2}" />
+            <td th:text="Overall" />
+            <td th:text="${longestWorkingTeam.days}" />
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/}">Back to Home Page</a>
+</div>
+</body>
+</html>
